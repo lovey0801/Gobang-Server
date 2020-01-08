@@ -1,3 +1,6 @@
+#简介
+使用了django框架实现了五子棋的服务端的逻辑
+
 # 基本结构列表
 
 ## <a id="player">player [玩家结构]</a>
@@ -39,29 +42,34 @@ response 基本结构如下：
 
 ## enter [玩家加入游戏]
 `request`
+
 | 参数名 | 类型 | 内容 |
 | ----  | ---- | ---- |
 | name | string | 玩家名称 |
 
 `response`
+
 | 参数名 | 类型 | 内容 |
 | ----  | ---- | ---- |
 | game | [game](#game) | 游戏内容 |
 
 ## ready [玩家准备]
 `request`
+
 | 参数名 | 类型 | 内容 |
 | ----  | ---- | ---- |
 | tableCode | int | 游戏桌号 |
 | role | string | 玩家角色 (X 或 O) |
 
 `response`
+
 | 参数名 | 类型 | 内容 |
 | ----  | ---- | ---- |
 | game | [game](#game) | 游戏内容 |
 
 ## play [玩家开始游戏、玩游戏、轮询状态协议]
 `request`
+
 | 参数名 | 类型 | 内容 |
 | ----  | ---- | ---- |
 | tableCode | int | 游戏桌号 |
@@ -69,6 +77,7 @@ response 基本结构如下：
 | position | int | 下棋的位置 (下棋时传具体位置，轮询传-1) |
 
 `response`
+
 | 参数名 | 类型 | 内容 |
 | ----  | ---- | ---- |
 | game | [game](#game) | 游戏内容 |
